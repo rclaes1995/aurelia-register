@@ -1,0 +1,14 @@
+button {
+  border-radius: 0px !important; }
+
+.btn-occupied {
+  color: white;
+  background: orange; }
+
+.btn-free {
+  color: white;
+  background: green; }
+
+.btn-table {
+  min-height: 80px;
+  margin: 10px; }
