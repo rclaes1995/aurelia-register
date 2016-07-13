@@ -1,3 +1,5 @@
+import {Container} from 'aurelia-dependency-injection';
+
 export function configure(aurelia) {
   aurelia.use
     .standardConfiguration()

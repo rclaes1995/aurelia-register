@@ -427,9 +427,6 @@
     "crypto": "github:jspm/nodelibs-crypto@^0.1.0",
     "fs": "github:jspm/nodelibs-fs@^0.1.0"
   },
-  "npm:bn.js@4.11.4": {
-    "buffer": "github:jspm/nodelibs-buffer@^0.1.0"
-  },
   "npm:sha.js@2.4.5": {
     "inherits": "npm:inherits@^2.0.1",
     "buffer": "github:jspm/nodelibs-buffer@^0.1.0",
@@ -536,5 +533,8 @@
   "github:jspm/nodelibs-https@0.1.0": {
     "https-browserify": "npm:https-browserify@0.0.0"
   },
-  "github:jspm/nodelibs-tls@0.1.0": {}
+  "github:jspm/nodelibs-tls@0.1.0": {},
+  "npm:bn.js@4.11.5": {
+    "buffer": "github:jspm/nodelibs-buffer@^0.1.0"
+  }
 }

@@ -1,7 +1,18 @@
-export class TableOverview {
-  heading = 'Kassa';
+import {inject} from 'aurelia-framework';
+import {TableCollection} from './collections/table';
 
-  tables = [
+@inject(TableCollection)
+export class TableOverview {
+
+  constructor(collection:TableCollection){
+    this.collection = collection;
+    console.log(this.collection);
+  }
+
+}
+
+
+  /*tables = [
     {isVisible:true, name:'B1'},
     {isVisible:true, name:'B2'},
     {isVisible:true, name:'B3'},
@@ -21,5 +32,4 @@ export class TableOverview {
     {isVisible:true, name:'1'},
     {isVisible:true, name:'5'},
     {isVisible:true, name:'TOOG'}
-  ];
-}
+  ];*/

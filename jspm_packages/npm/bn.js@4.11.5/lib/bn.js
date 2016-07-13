@@ -41,7 +41,10 @@
       Buffer = require('buf' + 'fer').Buffer;
     } catch (e) {}
     BN.isBN = function isBN(num) {
-      return num !== null && typeof num === 'object' && num.constructor.name === 'BN' && Array.isArray(num.words);
+      if (num instanceof BN) {
+        return true;
+      }
+      return num !== null && typeof num === 'object' && num.constructor.wordSize === BN.wordSize && Array.isArray(num.words);
     };
     BN.max = function max(left, right) {
       if (left.cmp(right) > 0)
