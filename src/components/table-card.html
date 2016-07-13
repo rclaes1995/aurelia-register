@@ -1,3 +1,8 @@
 <template class="col-xs-4">
-  <button class="btn btn-block btn-table ${isFree ? 'btn-free' : 'btn-occupied'}" if.bind="table.isVisible" click.trigger="isFree ? newOrder() : openOrder()">${table.name}</button>
+  <button
+  class="btn btn-block btn-table ${isFree ? 'btn-free' : 'btn-occupied'}"
+  if.bind="table.isVisible"
+  click.trigger="isFree ? newOrder() : openOrder()">
+    ${table.name}
+  </button>
 </template>
