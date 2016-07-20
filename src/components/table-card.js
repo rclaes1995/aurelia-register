@@ -12,12 +12,17 @@ export class TableCard{
     this.router = router;
   }
 
-  newOrder(table)
-  {
-    this.router.navigateToRoute("open-order", {id:this.table.name});
+  attached(){
+    var billRef = firebase.database().ref('bills/' + this.table.name);
+    billRef.once('value', snapshot => {
+      if(snapshot.exists()){
+        this.isFree = false;
+      }
+    });
   }
 
-  set IsFree(value){
-    this.isFree = value;
+  openDetails(table)
+  {
+    this.router.navigateToRoute("table-details", {id:this.table.name});
   }
 }

@@ -2,7 +2,7 @@
   <button
   class="btn btn-block btn-table ${isFree ? 'btn-free' : 'btn-occupied'}"
   if.bind="table.isVisible"
-  click.trigger="isFree ? newOrder() : openOrder()">
+  click.trigger="openDetails()">
     ${table.name}
   </button>
 </template>

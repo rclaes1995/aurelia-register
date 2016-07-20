@@ -1,4 +1,4 @@
-export class OpenOrder {
+export class TableDetails {
   heading = 'Order';
   bill = null;
   billRef = null;

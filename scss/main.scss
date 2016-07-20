@@ -1,20 +1,49 @@
+body{
+  color: white;
+  background-image: url('../images/bg.png');
+  background-size: cover;
+}
+
 button{
   border-radius: 0px !important;
 }
 
-.btn-occupied{
-  color: white;
-  background:orange;
-}
-
-.btn-free
-{
-  color: white;
-  background:green;
-}
-
 .btn-table
 {
-  min-height:80px;
-  margin: 10px;
+  margin: 20px 0;
+  color: white;
+  border: 1px solid white;
+  height: 19vh;
+  background: rgba(255,255,255,0.4);
+  font-size: 6vh;
+  &:hover{
+    background: rgba(255,255,255,0.8);
+  }
+}
+
+.btn-occupied{
+  background: rgba(255,212,82,0.4);
+  &:hover{
+    background: rgba(255,212,82,0.8);
+  }
+}
+
+.btn-free{
+
+}
+
+.panel{
+  margin-top: 20px;
+  background: transparent;
+  border-radius: 0;
+  .panel-body{
+    background: rgba(255,255,255,0.4);
+    color: #000;
+  }
+  .panel-footer
+  {
+    padding: 10px;
+    margin: 0;
+    background: rgba(255,255,255,0.4);
+  }
 }
