@@ -1,1 +1,0 @@
-module.exports = require("npm:firebase@2.4.2/lib/firebase-web.js");
