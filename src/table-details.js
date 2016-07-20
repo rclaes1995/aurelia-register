@@ -1,18 +1,21 @@
 export class TableDetails {
   heading = 'Order';
   bill = null;
-  billRef = null;
 
   constructor()
   {
-
   }
 
   activate(params){
-      this.billRef = firebase.database().ref('bills/'+params.id);
-      this.billRef.on('value', snapshot => {
+    var billRef = firebase.database().ref('bills/'+params.id);
+    billRef.on('value', snapshot => {
+      if(snapshot.exists()){
         this.bill = snapshot.val();
-      });
+      }
+      else {
+        this.bill = {totalAmount:0}
+      }
+    });
   }
 
   removeBill()
