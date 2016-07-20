@@ -31,6 +31,7 @@ System.config({
     "bootstrap": "github:twbs/bootstrap@3.3.6",
     "core-js": "npm:core-js@2.1.0",
     "fetch": "github:github/fetch@0.10.1",
+    "firebase": "github:firebase/firebase-bower@3.2.0",
     "font-awesome": "npm:font-awesome@4.5.0",
     "text": "github:systemjs/plugin-text@0.0.4",
     "github:jspm/nodelibs-assert@0.1.0": {

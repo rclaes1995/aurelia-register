@@ -17,11 +17,6 @@ export class TableCard{
     this.router.navigateToRoute("open-order", {id:this.table.name});
   }
 
-  openOrder()
-  {
-    alert('Open order');
-  }
-
   set IsFree(value){
     this.isFree = value;
   }

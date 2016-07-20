@@ -13,5 +13,16 @@
     <script>
       SystemJS.import('aurelia-bootstrapper');
     </script>
+    <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCyLGcP7x7Jo3rEQFO1vzDLiknfrm_t_CU",
+        authDomain: "wolf-espressobar.firebaseapp.com",
+        databaseURL: "https://wolf-espressobar.firebaseio.com",
+        storageBucket: "wolf-espressobar.appspot.com",
+      };
+      firebase.initializeApp(config);
+    </script>
   </body>
 </html>
