@@ -1,0 +1,27 @@
+<template>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <td>Product</td>
+            <td>Aantal</td>
+            <td>Prijs</td>
+            <td>Totaal</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr repeat.for="product of order.products">
+            <td>${product.name}</td>
+            <td>${product.amount}</td>
+            <td>&euro; ${product.price}</td>
+            <td>&euro; ${product.amount * product.price}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="panel-footer">
+      Bestelling geplaatst om ${order.time}.
+    </div>
+  </div>
+</template>

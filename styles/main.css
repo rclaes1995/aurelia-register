@@ -1,10 +1,24 @@
 body {
-  color: white;
+  color: #FFF;
   background-image: url("../images/bg.png");
-  background-size: cover; }
+  background-size: cover;
+  font-family: 'Comfortaa', cursive; }
+
+a {
+  color: rgba(255, 255, 255, 0.4); }
+  a:hover {
+    color: rgba(255, 255, 255, 0.8); }
 
 button {
   border-radius: 0px !important; }
+
+.btn-default {
+  background: rgba(0, 0, 0, 0.4);
+  color: #FFF;
+  height: 15vh; }
+  .btn-default:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #FFF; }
 
 .btn-table {
   margin: 20px 0;
@@ -17,18 +31,21 @@ button {
     background: rgba(255, 255, 255, 0.8); }
 
 .btn-occupied {
-  background: rgba(255, 212, 82, 0.4); }
+  background: rgba(255, 255, 255, 0.4); }
   .btn-occupied:hover {
-    background: rgba(255, 212, 82, 0.8); }
+    background: rgba(255, 255, 255, 0.8); }
 
 .panel {
   margin-top: 20px;
   background: transparent;
   border-radius: 0; }
   .panel .panel-body {
-    background: rgba(255, 255, 255, 0.4);
-    color: #000; }
+    background: rgba(255, 255, 255, 0.4); }
   .panel .panel-footer {
     padding: 10px;
     margin: 0;
     background: rgba(255, 255, 255, 0.4); }
+
+.table td {
+  background: rgba(255, 255, 255, 0.8);
+  color: #000; }

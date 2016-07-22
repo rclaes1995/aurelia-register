@@ -1,11 +1,11 @@
-  <template>
-    <div class="panel panel-default">
-      <div class="panel-body">
-          <h1 class="text-center">&euro; ${bill.totalAmount}</h1>
-      </div>
-      <div class="panel-footer">
-          <button class="btn btn-block btn-info" click.trigger="checkout()">Afrekenen</button>
-          <button class="btn btn-block btn-danger" click.trigger="removeBill()">Verwijderen</button>
-      </div>
+<template>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <h1 class="text-center">&euro; ${bill.totalAmount}</h1>
     </div>
-  </template>
+    <div class="panel-footer">
+        <button class="btn btn-block btn-default" click.trigger="checkout()"><i class="fa fa-shopping-basket fa-3x"></i></button>
+        <button class="btn btn-block btn-default" click.trigger="removeBill()"><i class="fa fa-trash fa-3x"></i></button>
+    </div>
+  </div>
+</template>

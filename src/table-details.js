@@ -1,9 +1,16 @@
+import {inject} from 'aurelia-framework';
+import {Router} from 'aurelia-router';
+
+@inject(Router)
 export class TableDetails {
   heading = 'Order';
   bill = null;
+  orders = null;
+  router = null;
 
-  constructor()
+  constructor(router)
   {
+    this.router = router;
   }
 
   activate(params){
@@ -11,16 +18,22 @@ export class TableDetails {
     billRef.on('value', snapshot => {
       if(snapshot.exists()){
         this.bill = snapshot.val();
+        this.bill.totalAmount = 0;
+        for(var order of this.bill.orders)
+        {
+          for(var product of order.products)
+          {
+            this.bill.totalAmount += product.price * product.amount;
+          }
+        }
       }
       else {
-        this.bill = {totalAmount:0}
       }
     });
   }
 
-  removeBill()
+  back()
   {
-    alert('Removing...');
-    this.billRef.remove();
+      this.router.navigateToRoute("table-overview");
   }
 }

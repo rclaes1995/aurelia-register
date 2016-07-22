@@ -1,11 +1,33 @@
+$foregroundWhite: rgba(255,255,255,0.4);
+$backgroundWhite: rgba(255,255,255,0.8);
+
 body{
-  color: white;
+  color: #FFF;
   background-image: url('../images/bg.png');
   background-size: cover;
+  font-family: 'Comfortaa', cursive;
+}
+
+a{
+  color: $foregroundWhite;
+  &:hover{
+    color:$backgroundWhite;
+  }
 }
 
 button{
   border-radius: 0px !important;
+}
+
+
+.btn-default{
+  background:rgba(0,0,0,0.4);
+  color: #FFF;
+  height: 15vh;
+  &:hover{
+    background:rgba(0,0,0,0.8);
+    color: #FFF;
+  }
 }
 
 .btn-table
@@ -14,17 +36,17 @@ button{
   color: white;
   border: 1px solid white;
   height: 19vh;
-  background: rgba(255,255,255,0.4);
+  background: $foregroundWhite;
   font-size: 6vh;
   &:hover{
-    background: rgba(255,255,255,0.8);
+    background: $backgroundWhite;
   }
 }
 
 .btn-occupied{
-  background: rgba(255,212,82,0.4);
+  background: $foregroundWhite;
   &:hover{
-    background: rgba(255,212,82,0.8);
+    background: $backgroundWhite;
   }
 }
 
@@ -38,12 +60,19 @@ button{
   border-radius: 0;
   .panel-body{
     background: rgba(255,255,255,0.4);
-    color: #000;
   }
   .panel-footer
   {
     padding: 10px;
     margin: 0;
     background: rgba(255,255,255,0.4);
+  }
+}
+
+.table
+{
+  td{
+    background: rgba(255,255,255,0.8);
+    color: #000;
   }
 }
