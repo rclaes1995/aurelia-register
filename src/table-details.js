@@ -20,16 +20,15 @@ export class TableDetails {
       if(snapshot.exists()){
         this.tableId = snapshot.key;
         this.bill = snapshot.val();
+        console.table(this.bill.orders);
         this.bill.totalAmount = 0;
-        for(var order of this.bill.orders)
-        {
-          for(var product of order.products)
-          {
-            this.bill.totalAmount += product.price * product.amount;
-          }
-        }
-      }
-      else {
+        // for(var order of this.bill.orders)
+        // {
+        //   for(var product of order.products)
+        //   {
+        //     this.bill.totalAmount += product.price * product.amount;
+        //   }
+        // }
       }
     });
   }

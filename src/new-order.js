@@ -17,7 +17,7 @@ export class NewOrder {
   activate(params){
     params.id ? this.tableId = params.id : this.router.navigateToRoute("table-overview");
     var productsRef = firebase.database().ref('products');
-    productsRef.on('value', snapshot => {
+    productsRef.once('value', snapshot => {
       this.products = snapshot.val();
     });
 
@@ -28,8 +28,17 @@ export class NewOrder {
     this.router.navigateToRoute("table-details", {id:this.tableId});
   }
 
+
   addProduct(product)
   {
-    this.order.products.push(product);
+    var pIndex = this.order.products.indexOf(product);
+    if(pIndex > -1)
+    {
+      this.order.products[pIndex].amount++
+    }
+    else {
+      product.amount = 1;
+      this.order.products.push(product);
+    }
   }
 }

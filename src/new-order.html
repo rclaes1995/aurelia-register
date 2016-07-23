@@ -15,7 +15,7 @@
     <product repeat.for="product of products" product.bind="product" click.trigger="addProduct(product)"></product>
     </div>
     <div class="col-sm-3">
-      <order order.bind="order"></new-order>
+      <order order.two-way="order" id.bind="tableId"></new-order>
     </div>
   </div>
 </template>

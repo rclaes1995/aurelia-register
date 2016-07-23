@@ -1,5 +1,7 @@
 $foregroundWhite: rgba(255,255,255,0.4);
 $backgroundWhite: rgba(255,255,255,0.8);
+$occupied: rgba(133,171,203,0.4);
+$occupiedHover: rgba(133,171,203,0.8);
 
 body{
   color: #FFF;
@@ -62,9 +64,10 @@ button{
 }
 
 .btn-occupied{
-  background: $foregroundWhite;
+  background: $occupied;
   &:hover{
-    background: $backgroundWhite;
+    background: $occupiedHover;
+    color: white;
   }
 }
 
