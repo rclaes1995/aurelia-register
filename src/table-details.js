@@ -7,6 +7,7 @@ export class TableDetails {
   bill = null;
   orders = null;
   router = null;
+  tableId = null;
 
   constructor(router)
   {
@@ -17,6 +18,7 @@ export class TableDetails {
     var billRef = firebase.database().ref('bills/'+params.id);
     billRef.on('value', snapshot => {
       if(snapshot.exists()){
+        this.tableId = snapshot.key;
         this.bill = snapshot.val();
         this.bill.totalAmount = 0;
         for(var order of this.bill.orders)
@@ -34,6 +36,11 @@ export class TableDetails {
 
   back()
   {
-      this.router.navigateToRoute("table-overview");
+    this.router.navigateToRoute("table-overview");
+  }
+
+  newOrder()
+  {
+    this.router.navigateToRoute("new-order", {id:this.tableId});
   }
 }

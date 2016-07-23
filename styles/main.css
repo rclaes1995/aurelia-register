@@ -12,6 +12,10 @@ a {
 button {
   border-radius: 0px !important; }
 
+.btn-menu {
+  padding-right: 10px;
+  padding-top: 10px; }
+
 .btn-default {
   background: rgba(0, 0, 0, 0.4);
   color: #FFF;
@@ -28,6 +32,16 @@ button {
   background: rgba(255, 255, 255, 0.4);
   font-size: 6vh; }
   .btn-table:hover {
+    background: rgba(255, 255, 255, 0.8); }
+
+.btn-product {
+  margin: 20px 0;
+  color: white;
+  border: 1px solid white;
+  height: 12vh;
+  background: rgba(255, 255, 255, 0.4);
+  font-size: 3vh; }
+  .btn-product:hover {
     background: rgba(255, 255, 255, 0.8); }
 
 .btn-occupied {

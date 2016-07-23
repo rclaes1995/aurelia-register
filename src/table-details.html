@@ -1,15 +1,16 @@
 <template>
   <require from="./components/bill"></require>
-  <require from="./components/order"></require>
+  <require from="./components/order-details"></require>
 
   <div class="row">
-    <div class="col-xs-12" style="padding:20px 10px;">
-      <a click.trigger="back()"><i class="fa fa-arrow-circle-left fa-4x" aria-hidden="true"></i></a>
+    <div class="col-sm-12">
+      <a click.trigger="back()"><i class="fa fa-arrow-circle-left fa-4x btn-menu" aria-hidden="true"></i></a>
+      <a click.trigger="newOrder()"><i class="fa fa-plus-circle fa-4x btn-menu" aria-hidden="true"></i></a>
     </div>
   </div>
   <div class="row">
     <div class="col-sm-8">
-      <order repeat.for="order of bill.orders" order.bind="order"></order>
+      <order-details repeat.for="order of bill.orders" order.bind="order"></order>
     </div>
     <div class="col-sm-4">
       <bill bill.bind="bill">
