@@ -16,24 +16,30 @@ Watches for changes and compiles .scss.
 
 **This app will serve as a register for a local coffeebar.**
 
-MUST
+##MUST
 - Choose a table
 - Add orders
 - Edit or remove orders
 - Remove bill
 
-todo
+###todo
 - Checkout bill
 - Product categorization
 
-SHOULD
+##SHOULD
+- Calculate change based on received money
 - Product management
 - Table management
 
-COULD
+##COULD
 - Split bill
 
-WOULD
+##WOULD
 - Citylife integration (loyalty program)
 - Bancontact app integration
 
+#Troubleshooting
+In case of build error due to gulp-sass error
+
+    npm uninstall gulp-sass
+    npm install gulp-sass
