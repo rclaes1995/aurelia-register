@@ -15,22 +15,24 @@ export class TableDetails {
   }
 
   activate(params){
+    this.tableId = params.id;
     var billRef = firebase.database().ref('bills/'+params.id);
-    billRef.on('value', snapshot => {
+    billRef.orderByValue().on('value', snapshot => {
       if(snapshot.exists()){
-        this.tableId = snapshot.key;
         this.bill = snapshot.val();
-        console.table(this.bill.orders);
+
         this.bill.totalAmount = 0;
-        // for(var order of this.bill.orders)
-        // {
-        //   for(var product of order.products)
-        //   {
-        //     this.bill.totalAmount += product.price * product.amount;
-        //   }
-        // }
+
+        for(var key in this.bill.orders)
+        {
+          for(var product of this.bill.orders[key].products)
+          {
+            this.bill.totalAmount += product.price * product.amount;
+          }
+        }
       }
     });
+
   }
 
   back()

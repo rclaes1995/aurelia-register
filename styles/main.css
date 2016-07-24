@@ -16,6 +16,9 @@ button {
   padding-right: 10px;
   padding-top: 10px; }
 
+.btn-sm.btn-default {
+  height: 100%; }
+
 .btn-default {
   background: rgba(0, 0, 0, 0.4);
   color: #FFF;
@@ -51,16 +54,21 @@ button {
     color: white; }
 
 .panel {
-  margin-top: 20px;
+  margin: 10px 0;
   background: transparent;
   border-radius: 0; }
   .panel .panel-body {
-    background: rgba(255, 255, 255, 0.4); }
+    background: rgba(255, 255, 255, 0.4);
+    padding: 5px; }
   .panel .panel-footer {
-    padding: 10px;
+    padding: 5px 5px;
     margin: 0;
     background: rgba(255, 255, 255, 0.4); }
 
-.table td {
-  background: rgba(255, 255, 255, 0.8);
-  color: #000; }
+.table {
+  margin: 0; }
+  .table thead {
+    font-weight: bold; }
+  .table td {
+    background: rgba(255, 255, 255, 0.8);
+    color: #000; }

@@ -4,5 +4,6 @@ export class OrderDetails{
   @bindable order = null;
 
   activate(){
+    alert(this.order);
   }
 }

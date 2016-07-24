@@ -1,4 +1,6 @@
 import {bindable} from 'aurelia-framework';
+import {inject} from 'aurelia-framework';
+import {Router} from 'aurelia-router';
 
 export class Product{
   @bindable product = null;
@@ -6,11 +8,5 @@ export class Product{
 
   constructor(router)
   {
-  }
-
-  addProduct(product)
-  {
-    var pIndex = this.order.products.indexOf(product);
-    pIndex > -1 ? this.order.products[pIndex].amount++ : product.amount = 1 && this.order.products.push(product);
   }
 }
