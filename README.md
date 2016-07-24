@@ -1,5 +1,7 @@
 # aurelia-register
 
+**This app will serve as a register for a local coffeebar. The coffeebar has multiple tables and each table should be able to take multiple orders. An order has mulitple products and after payment the table returns to an empty state.**
+
 This app is built on Aurelia and depends on the Sync Database by Firebase.
 
 Clone or download the repository.
@@ -14,7 +16,6 @@ Then run the following command:
 Should now be running on localhost:3000 with Browserify.
 Watches for changes and compiles .scss.
 
-**This app will serve as a register for a local coffeebar.**
 
 ##MUST
 - Choose a table
@@ -22,7 +23,7 @@ Watches for changes and compiles .scss.
 - Edit or remove orders
 - Remove bill
 
-###todo
+###TODO
 - Checkout bill
 - Product categorization
 
@@ -33,6 +34,7 @@ Watches for changes and compiles .scss.
 
 ##COULD
 - Split bill
+- Print/mail receipt
 
 ##WOULD
 - Citylife integration (loyalty program)
